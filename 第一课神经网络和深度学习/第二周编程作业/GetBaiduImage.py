@@ -60,5 +60,5 @@ def getImg(dataList, localPath):
                 print('图片链接不存在')
 
 if __name__ == '__main__':
-    dataList = getManyPages('狗',1)  # 参数1:关键字，参数2:要下载的页数
+    dataList = getManyPages('狗',10)  # 参数1:关键字，参数2:要下载的页数
     getImg(dataList, 'D:\work\Code\Deep-Learning-With-Python\第一课神经网络和深度学习\第二周编程作业\\') # 参数2:指定保存的路径
