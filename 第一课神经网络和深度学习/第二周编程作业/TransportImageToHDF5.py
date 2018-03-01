@@ -87,26 +87,26 @@ def loadDataset(datasetName):
 
     #classes = np.array(test_dataset["list_classes"][:])
 
-    #datasetYOrig = datasetYOrig.reshape((1, datasetYOrig.shape[0]))
+    datasetYOrig = datasetYOrig.reshape((1, datasetYOrig.shape[0]))
     #testSetYOrig = testSetYOrig.reshape((1, test_set_y_orig.shape[0]))
 
     return datasetXOrig, datasetYOrig
 
 if __name__ == "__main__":
-    #imageDir = r"D:\work\Code\Deep-Learning-With-Python\第一课神经网络和深度学习\第二周编程作业\images"
-    #fileGlob = os.path.join(imageDir, 'training', '*.' + 'jpg')
-    #fileList = []
-    #fileList.extend(glob.glob(fileGlob))
-    #print(fileList[0].split("\\")[-1])
-    #storeDataToHDF5(fileList, 64, 64, 'datasets/train_dogvnondog.h5')    
+    imageDir = r"D:\work\Code\Deep-Learning-With-Python\第一课神经网络和深度学习\第二周编程作业\images"
+    fileGlob = os.path.join(imageDir, 'training', '*.' + 'jpg')
+    fileList = []
+    fileList.extend(glob.glob(fileGlob))
+    print(fileList[0].split("\\")[-1])
+    storeDataToHDF5(fileList, 64, 64, 'datasets/train_dogvnondog.h5')    
 
     #time.sleep(2)
 
-    datasetXOrig, datasetYOrig = loadDataset('datasets/train_dogvnondog.h5')
-    print(datasetXOrig.shape)
-    print(datasetXOrig[20].shape)
-    print(datasetYOrig.shape)
-    print(datasetYOrig)
-    plt.imshow(datasetXOrig[5])
+    #datasetXOrig, datasetYOrig = loadDataset('datasets/train_dogvnondog.h5')
+    #print(datasetXOrig.shape)
+    #print(datasetXOrig[20].shape)
+    #print(datasetYOrig.shape)
+    #print(datasetYOrig)
+    #plt.imshow(datasetXOrig[5])
     #plt.show()
-    misc.imsave('2.jpg', datasetXOrig[5])
+    #misc.imsave('2.jpg', datasetXOrig[5])
